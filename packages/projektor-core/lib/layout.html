@@ -1,0 +1,15 @@
+<template name="layout">
+    <div class="container">
+        <header>
+          {{>Template.dynamic template=header }}
+        </header>
+
+        <main>
+          {{>Template.dynamic template=content}}
+        </main>
+
+    </div>
+    <footer>
+      {{>Template.dynamic template=footer }}
+    </footer>
+</template>

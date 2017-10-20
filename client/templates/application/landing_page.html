@@ -1,0 +1,25 @@
+<template name="landingPage">
+
+  <ol class="breadcrumb">
+    <li class="active">Startseite</li>
+  </ol>
+
+    {{#each navItems}}
+      {{> UI.dynamic template=this data=@index}}
+    {{/each}}
+    {{#if endOfDocuments}}
+      <div class="col-md-12">
+        <div class="col-xs-12 col-md-2 col-md-offset-5">
+    	     <a href="#" class="load-more btn btn-primary" id="viewMore">Mehr Anzeigen</a>
+        </div>
+      </div>
+    {{/if}}
+</template>
+
+<template name="loadCards">
+  {{#each documents}}
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 containerFlip">
+      {{>projectCard projectId=this._id}}
+    </div>
+  {{/each}}
+</template>

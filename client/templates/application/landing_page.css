@@ -1,0 +1,15 @@
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    /*padding-left: 70px;
+    padding-right: 70px;*/
+}
+
+.navbar-inverse .navbar-brand {
+  color: white;
+}
+
+.containerFlip {
+  position: relative;
+  perspective: 800px;
+  height: 480px;
+}
