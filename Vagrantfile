@@ -44,6 +44,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
         vb.customize ["modifyvm", :id, "--memory", mem]
         vb.customize ["modifyvm", :id, "--cpus", cpus]
+        vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/vagrant", "1"]
+
     end
    
     config.vm.post_up_message = "Webserver: http://192.168.100.100:3000"
